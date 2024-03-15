@@ -1,3 +1,3 @@
-@extends('layouts.main')
+@extends('comics.index')
 
 @section('title', 'DC Comics - Home')
