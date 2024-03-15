@@ -23,3 +23,9 @@ Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 
 // Rotta dettaglio
 Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
+
+// Rotta di creazione
+Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
+
+// Rotta di modifica del nuovo comic creato
+Route::post('/comics/store', [ComicController::class, 'store'])->name('comics.store');

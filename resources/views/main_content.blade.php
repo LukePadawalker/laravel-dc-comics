@@ -4,7 +4,7 @@
     </div>
     <div class="series-section">
         <div class="movies-container">
-            @foreach( as $comic)
+            @foreach(config('comics') as $comic)
             <div class="movie-card">
                 <a href="{{url("/comics/$comic->id")}}">
                     <img src="{{$comic['thumb']}}" alt="">
