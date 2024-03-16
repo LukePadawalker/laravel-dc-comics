@@ -4,7 +4,7 @@
     </div>
     <div class="series-section">
         <div class="movies-container">
-            @foreach(config('comics') as $comic)
+            @foreach($comics as $comic)
             <div class="movie-card">
                 <a href="{{url("/comics/$comic->id")}}">
                     <img src="{{$comic['thumb']}}" alt="">
@@ -14,7 +14,10 @@
             </div>
             @endforeach
         </div>
-        <button>Load More</button>
+        <div class="container d-flex justify-content-around align-items-center">
+            <button>Load More</button>
+            <button href="" >Add A comic (Admin)</button>
+        </div>
     </div>
     <div class="blue-banner">
         <div class="container">

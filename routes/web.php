@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [ComicController::class, 'index'])->name('');
 
 // Rotta lista
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
@@ -28,4 +26,4 @@ Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.sh
 Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
 
 // Rotta di modifica del nuovo comic creato
-Route::post('/comics/store', [ComicController::class, 'store'])->name('comics.store');
+Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');

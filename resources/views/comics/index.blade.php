@@ -1,13 +1,3 @@
-<!-- @foreach($comics as $comic)
-    <div class="movie-card">
-        <a href="{{url("/comics/$comic->id")}}">
-            <img src="{{$comic['thumb']}}" alt="">
-            <p>{{ $comic['title']}}</p>
-            
-        </a>
-    </div>
-@endforeach -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

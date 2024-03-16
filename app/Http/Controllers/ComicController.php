@@ -21,8 +21,11 @@ class ComicController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Comic $comic)
     {
+        $comics = Comic::all();
+
+        return view('comics.create', compact('create'));
         //
     }
 
