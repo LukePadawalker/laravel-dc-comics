@@ -1,9 +1,13 @@
 <div>
-<form class="row g-3" action=" {{route('comics.store')}}" method="POST">
+<form class="row g-3" action=" {{route('comics.edit', ['id' => $comic->id])}}" method="POST">
   @csrf
+
+
+
+  @method('PUT')
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4">
+    <input type="email" class="form-control" id="inputEmail4" value="{{ $comic->name}}">
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Password</label>

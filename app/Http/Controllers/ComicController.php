@@ -25,7 +25,8 @@ class ComicController extends Controller
     {
         $comics = Comic::all();
 
-        return view('comics.create', compact('create'));
+
+        return view('comics.create', compact('comic'));
         //
     }
 
@@ -61,6 +62,9 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
+        $comics = Comic::all();
+
+
         return view('comics.show', compact('comic'));
         //
     }
@@ -70,6 +74,9 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
+
+        $comics = Comic::all();
+        return view('comics.edit', compact('comic'));
         //
     }
 
@@ -86,6 +93,9 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
+        $comic = Comic::findOrFail($comic->id);
+        $comic->delete();
+
         //
     }
 }

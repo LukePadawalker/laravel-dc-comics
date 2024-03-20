@@ -15,8 +15,10 @@
             @endforeach
         </div>
         <div class="container d-flex justify-content-around align-items-center">
-            <button>Load More</button>
-            <button href="" >Add A comic (Admin)</button>
+            <a class="btn btn-primary">Load More</a>
+            <a class="btn btn-primary"href="{{url("/comics/create")}}" >Add a comic (Admin)</a>
+            <a class="btn btn-primary" href="{{url("/comics/edit")}}" >Edit a comic (Admin)</a>
+
         </div>
     </div>
     <div class="blue-banner">
